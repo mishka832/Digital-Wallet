@@ -37,7 +37,6 @@ router.post('/credit', auth, async (req, res) => {
         flag: false
     });
 
-    // 🔍 Fraud detection
     const suspicious = fraudDetection(wallet.transactions);
     if (suspicious.length > 0) {
         wallet.markModified('transactions');
@@ -69,7 +68,6 @@ router.post('/debit', auth, async (req, res) => {
         flag: false
     });
 
-    // 🔍 Fraud detection
     const suspicious = fraudDetection(wallet.transactions);
     if (suspicious.length > 0) {
         wallet.markModified('transactions');
@@ -119,7 +117,6 @@ router.post('/transfer', auth, async (req, res) => {
         flag: false
     });
 
-    // 🔍 Fraud detection for sender
     const suspiciousSender = fraudDetection(wallet.transactions);
     if (suspiciousSender.length > 0) {
         wallet.markModified('transactions');

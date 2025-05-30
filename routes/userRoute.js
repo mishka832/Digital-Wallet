@@ -68,8 +68,6 @@ router.post('/login',
         if (!isMatch) {
             return res.status(400).json({ message: "User or password is incorrect" });
         }
-
-        // ⭐ Include role in token
         const token = jwt.sign(
             {
                 id: user._id,
