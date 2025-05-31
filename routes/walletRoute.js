@@ -14,25 +14,32 @@ router.post('/credit', auth, async (req, res) => {
     if (amount <= 0) {
         return res.status(400).json({ message: "Invalid amount entered" });
     }
+
     let wallet = await walletModel.findOne({ userId: req.user.id });
     if (!wallet) {
         try {
             wallet = await walletModel.create({
                 userId: req.user.id,
                 balance: amount,
-                transactions: [{ type: 'credit', amount, currency: req.body.currency || 'INR' }],
+                transactions: [{
+                    type: 'credit',
+                    amount,
+                    currency: currency || 'INR',
+                    date: new Date(),
+                    flag: false
+                }],
             });
             return res.status(201).json({ message: "Wallet created successfully", wallet });
         } catch (err) {
             return res.status(500).json({ message: "Internal server error", error: err.message });
         }
-
     }
+
     wallet.balance += amount;
     wallet.transactions.push({
         type: 'credit',
         amount: amount,
-        currency: req.body.currency || 'INR',
+        currency: currency || 'INR',
         date: new Date(),
         flag: false
     });
@@ -41,12 +48,11 @@ router.post('/credit', auth, async (req, res) => {
     if (suspicious.length > 0) {
         wallet.markModified('transactions');
         emailService("admin@gmail.com", `Suspicious transactions detected for user ${req.user.id}. Please review:\n${JSON.stringify(suspicious, null, 2)}`);
-        await wallet.save();
     }
+
+    await wallet.save();
     res.status(200).json({ message: "Amount credited successfully", wallet });
-
-
-})
+});
 router.post('/debit', auth, async (req, res) => {
     const { amount, currency } = req.body;
     if (amount <= 0) {

@@ -1,0 +1,519 @@
+{
+	"info": {
+		"_postman_id": "3190eb19-0129-46b3-8965-fcd1308f879a",
+		"name": "Digital Wallet and Fraud Detection API Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "45425048",
+		"_collection_link": "https://mishkaraheja.postman.co/workspace/Mishka-Raheja's-Workspace~9c549511-55ce-4fbe-82a5-29873b626035/collection/45425048-3190eb19-0129-46b3-8965-fcd1308f879a?action=share&source=collection_link&creator=45425048"
+	},
+	"item": [
+		{
+			"name": "Register API",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MzdhZjI4YWExOGM4MGZjYThhMGY2ZCIsImlhdCI6MTc0ODQ3OTc5NywiZXhwIjoxNzQ4NDgzMzk3fQ.hw5exCtV56SC6pLfGrDcPodr8qlsXuLXyr7p8_VBXSU",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\":\"anushkasharma23\",\r\n  \"email\":\"anushkasharma23@gmail.com\",\r\n  \"password\":\"anushkasharma23\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/user/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login API",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MzdhZjI4YWExOGM4MGZjYThhMGY2ZCIsImlhdCI6MTc0ODQ3OTc5NywiZXhwIjoxNzQ4NDgzMzk3fQ.hw5exCtV56SC6pLfGrDcPodr8qlsXuLXyr7p8_VBXSU",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\":\"anushkasharma23\",\r\n  \"password\":\"anushkasharma23\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Credit Amount API",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2FjMzRhODQzZGUyYjMzZGZkOTJhNCIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzQ4Njg4OTc3LCJleHAiOjE3NDg2OTI1Nzd9.vOVxbxGi_X9aS9FKR_j7yh6PeXTnHRh1pCwctMXPvRA",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"amount\":3000\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/wallet/credit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"wallet",
+						"credit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Debit Amount API",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2FjMzRhODQzZGUyYjMzZGZkOTJhNCIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzQ4NjgzODAyLCJleHAiOjE3NDg2ODc0MDJ9.t0UBIbHycOyjjD6NWoVehANEeduTkY_9Z9XsBd5g6t4",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"amount\":3000\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/wallet/debit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"wallet",
+						"debit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transfer Amount API",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2FjMzRhODQzZGUyYjMzZGZkOTJhNCIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzQ4Njg4OTc3LCJleHAiOjE3NDg2OTI1Nzd9.vOVxbxGi_X9aS9FKR_j7yh6PeXTnHRh1pCwctMXPvRA",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"amount\":200,\r\n    \"toUserId\":\"6837af28aa18c80fca8a0f6d\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/wallet/transfer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"wallet",
+						"transfer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transaction History API",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2FjMzRhODQzZGUyYjMzZGZkOTJhNCIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzQ4Njg1OTU5LCJleHAiOjE3NDg2ODk1NTl9.PbkLKPxfNMRJ_Deo5ZEEGqLCpuE1b06-snW999HXdNE",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/transaction",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"transaction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin Register API",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MzdhZjI4YWExOGM4MGZjYThhMGY2ZCIsImlhdCI6MTc0ODQ3OTc5NywiZXhwIjoxNzQ4NDgzMzk3fQ.hw5exCtV56SC6pLfGrDcPodr8qlsXuLXyr7p8_VBXSU",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\":\"mishkaraheja3005\",\r\n  \"email\":\"mishkaraheja3005@gmail.com\",\r\n  \"password\":\"mishka@3005\",\r\n  \"role\":\"admin\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/user/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin Login API",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\":\"mishkaraheja3005\",\r\n  \"password\":\"mishka@3005\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View All Users API",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2FjZjYzNDZlMTg3ZTQ1Y2M4MjdmNSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0ODY4NDcyNywiZXhwIjoxNzQ4Njg4MzI3fQ.wsECDt894l_rfiKA1JwqaTz_WHK_qpgYGkUO1FSHHog",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/admin/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"admin",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View all Transactions of All users API",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2FjZjYzNDZlMTg3ZTQ1Y2M4MjdmNSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0ODY4OTA5MiwiZXhwIjoxNzQ4NjkyNjkyfQ.tqDNRha9v9duwBbolNPU1ObbhT-hVgSBaNj2A8BTuA8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/admin/transactions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"admin",
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Top Users By Balance API",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2FjZjYzNDZlMTg3ZTQ1Y2M4MjdmNSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0ODY4OTA5MiwiZXhwIjoxNzQ4NjkyNjkyfQ.tqDNRha9v9duwBbolNPU1ObbhT-hVgSBaNj2A8BTuA8",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"count\":4\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/admin/top-users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"admin",
+						"top-users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View Flagged Transactions API",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2FjZjYzNDZlMTg3ZTQ1Y2M4MjdmNSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0ODY4NDcyNywiZXhwIjoxNzQ4Njg4MzI3fQ.wsECDt894l_rfiKA1JwqaTz_WHK_qpgYGkUO1FSHHog",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/admin/flagged-transactions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"admin",
+						"flagged-transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Aggregate Total User Balance API",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4M2FjZjYzNDZlMTg3ZTQ1Y2M4MjdmNSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0ODY4OTA5MiwiZXhwIjoxNzQ4NjkyNjkyfQ.tqDNRha9v9duwBbolNPU1ObbhT-hVgSBaNj2A8BTuA8",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/admin/total-balance",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"admin",
+						"total-balance"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
