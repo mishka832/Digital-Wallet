@@ -60,3 +60,9 @@ The system supports role-based authentication and authorization for both **users
    - JWT_SECRET: Secret key for JWT authentication
 5. Start the server:
    npm start
+## API Testing with Postman
+
+- A Postman collection is provided in the `postman` folder for easy API testing.  
+- Import the collection into Postman to test all available endpoints.  
+- The Postman folder also contains a README with details on how to use the collection.
+
