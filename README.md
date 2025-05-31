@@ -1,4 +1,4 @@
-# Secure Wallet Management System
+# Digital Wallet System with Cash Management and Fraud Detection
 
 ## Overview
 
